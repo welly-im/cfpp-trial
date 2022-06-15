@@ -1,9 +1,12 @@
 import { Button, Card, Form, InputGroup } from "react-bootstrap";
 import { MdOutlineFileUpload, MdArrowBack } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { Header } from "../components/header";
 
 export const Onboarding = () => {
   return (
     <>
+      <Header />
       <div className="d-flex justify-content-center mt-5">
         <Card className="container" style={{ width: "30rem" }}>
           <Card.Body className="d-flex justify-content-center">
@@ -44,9 +47,11 @@ export const Onboarding = () => {
         className="container d-flex justify-content-left mt-3"
         style={{ width: "30rem" }}
       >
-        <Button variant="outline-secondary" id="button-addon2" size="sm">
-          <MdArrowBack /> Return
-        </Button>
+        <Link to="/home">
+          <Button variant="outline-secondary" id="button-addon2" size="sm">
+            <MdArrowBack /> Return
+          </Button>
+        </Link>
       </div>
     </>
   );

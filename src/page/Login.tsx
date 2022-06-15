@@ -1,4 +1,5 @@
 import { Button, Card, Form, InputGroup } from "react-bootstrap";
+import { Link } from "react-router-dom";
 export const Login = () => {
   return (
     <>
@@ -26,7 +27,9 @@ export const Login = () => {
               type="password"
             />
           </InputGroup>
-          <Button variant="primary mb-3">Login</Button>
+          <Link to="/home">
+            <Button variant="primary mb-3 w-100">Login</Button>
+          </Link>
         </Card>
       </div>
     </>
