@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MainMenu } from "./page/MainMenu";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <body>
         <BrowserRouter>
           <Routes>
-            <Route path="/home" element={<>asd</>} />
+            <Route path="/home" element={<MainMenu/>} />
           </Routes>
         </BrowserRouter>
       </body>
