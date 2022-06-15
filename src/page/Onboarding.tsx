@@ -12,13 +12,13 @@ export const Onboarding = () => {
           <Card.Body className="d-flex justify-content-center">
             <Card.Title>Onboarding</Card.Title>
           </Card.Body>
-          CIF & Account Creation
+          <div className="ms-2">CIF & Account Creation</div>
           <div className="row">
-            <Form.Group controlId="formFile" className="col-10 ">
+            <Form.Group controlId="formFile" className="col-10 ms-2">
               <Form.Control type="file" size="sm" />
             </Form.Group>
             <Button
-              variant="outline-secondary"
+              variant="outline-primary"
               id="button-addon2"
               size="sm"
               className="col-1"
@@ -27,13 +27,13 @@ export const Onboarding = () => {
             </Button>
           </div>
           <hr />
-          Credit arrangement
+          <div className="ms-2">Credit arrangement</div>
           <div className="row">
-            <Form.Group controlId="formFile" className="col-10">
+            <Form.Group controlId="formFile" className="col-10 ms-2">
               <Form.Control type="file" size="sm" />
             </Form.Group>
             <Button
-              variant="outline-secondary"
+              variant="outline-primary"
               id="button-addon2"
               size="sm"
               className="col-1 mb-3"
