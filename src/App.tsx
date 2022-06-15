@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Login } from "./page/Login";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <body>
         <BrowserRouter>
           <Routes>
-            <Route path="/home" element={<>asd</>} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </BrowserRouter>
       </body>
