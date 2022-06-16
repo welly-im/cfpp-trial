@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { Login } from './page/Login';
 import { MainMenu } from './page/MainMenu';
 import { Onboarding } from './page/Onboarding';
@@ -20,6 +20,7 @@ function App() {
 						<Route path='/home' element={<MainMenu />} />
 						<Route path='/disbursement' element={<Disbursement />} />
 						<Route path='/preview' element={<Preview />} />
+						<Route path='*' element={<Navigate to='/login' />} />
 					</Routes>
 				</BrowserRouter>
 			</body>
