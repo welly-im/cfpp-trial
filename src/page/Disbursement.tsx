@@ -39,7 +39,6 @@ export function Disbursement() {
 									<>
 										<div className='d-flex gap-2 mb-3'>
 											<Form.Control
-												type='file'
 												placeholder={
 													acceptedFile
 														? acceptedFile && acceptedFile.name
