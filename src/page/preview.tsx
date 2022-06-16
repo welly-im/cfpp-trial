@@ -3,8 +3,12 @@ import { Tabs, Tab, Container, Table, Button } from 'react-bootstrap';
 import { Header } from '../components/header';
 import { Link } from 'react-router-dom';
 import { MdArrowBack } from 'react-icons/md';
+import { dataJson } from './Disbursement';
+import { useAtom } from 'jotai';
 
 export function Preview() {
+	const [data, setData] = useAtom(dataJson);
+	console.log(data);
 	return (
 		<>
 			<Header />
@@ -61,16 +65,31 @@ export function Preview() {
 						<>Haloo 2</>
 					</Tab>
 					<Tab eventKey='Disbursement' title='Disbursement'>
-						<>Disbursement</>
+						<Table bordered hover className='mt-5'>
+							<tbody>
+								{data.map((item: any) => {
+									return (
+										<tr key={item[0]}>
+											<td>{item[0]}</td>
+											<td>{item[1]}</td>
+											<td>{item[2]}</td>
+											<td>{item[3]}</td>
+											<td>{item[4]}</td>
+											<td>{item[5]}</td>
+										</tr>
+									);
+								})}
+							</tbody>
+						</Table>
 					</Tab>
 					<Tab eventKey='Repayment' title='Re-Payment'>
 						<>Re-Payment</>
 					</Tab>
 				</Tabs>
-				<Link
-					to='/home'
-					className='text-dark text-start d-inline-block w-25 mt-5'>
-					<MdArrowBack className='h-50 w-25' type='button' />
+				<Link to='/home'>
+					<Button variant='outline-secondary' id='button-addon2' size='sm'>
+						<MdArrowBack /> Back
+					</Button>
 				</Link>
 			</Container>
 		</>
